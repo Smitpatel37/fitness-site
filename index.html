@@ -3,40 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Friends' Fitness Guide</title>
+  <title>Get Stronger Without Stress </title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>💪 Fitness with Smit</h1>
-    <p>Personal workout guide for my close circle</p>
+  <header class="hero">
+    <h1>Transform Together 💪</h1>
+    <p>Your personal fitness guide by Smit — simple, strong, sustainable.</p>
+    <a href="#plan" class="hero-btn">Start Your Plan</a>
   </header>
 
   <main>
-    <section class="workout-section">
-      <h2>🏋️ Weekly Workout Plan</h2>
-      <ul>
-        <li><strong>Day 1:</strong> Chest + Triceps</li>
-        <li><strong>Day 2:</strong> Back + Biceps</li>
-        <li><strong>Day 3:</strong> Legs</li>
-        <li><strong>Day 4:</strong> Shoulders + Core</li>
-        <li><strong>Day 5:</strong> Full Body / HIIT</li>
-      </ul>
+    <section id="plan" class="workout-cards">
+      <h2>📅 Weekly Workout Plan</h2>
+      <div class="cards">
+        <div class="card">Day 1<br><strong>Chest + Triceps</strong></div>
+        <div class="card">Day 2<br><strong>Back + Biceps</strong></div>
+        <div class="card">Day 3<br><strong>Legs</strong></div>
+        <div class="card">Day 4<br><strong>Shoulders + Core</strong></div>
+        <div class="card">Day 5<br><strong>Full Body / HIIT</strong></div>
+      </div>
     </section>
 
     <section class="video-section">
-      <h2>🎥 Featured Workout Video</h2>
-      <iframe width="100%" height="200" src="https://www.youtube.com/embed/dJlFmxiL11s" frameborder="0" allowfullscreen></iframe>
+      <h2>🎥 Workout Demo</h2>
+      <div class="video-wrapper">
+        <iframe src="https://www.youtube.com/embed/dJlFmxiL11s" frameborder="0" allowfullscreen></iframe>
+      </div>
     </section>
 
     <section class="tips-section">
-      <h2>📝 Tips</h2>
-      <ul>
-        <li>Warm up before and stretch after every session</li>
-        <li>Focus on form, not just reps</li>
-        <li>Hydration and sleep are just as important</li>
-        <li>Track your progress weekly</li>
-      </ul>
+      <h2>Pro Tips</h2>
+      <div class="tips">
+        <div class="tip">💧 Stay hydrated always</div>
+        <div class="tip">📏 Focus on perfect form</div>
+        <div class="tip">🍳 Protein-rich meals daily</div>
+        <div class="tip">⏱️ Track your weekly progress</div>
+      </div>
     </section>
   </main>
 
