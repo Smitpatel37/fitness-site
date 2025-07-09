@@ -2,39 +2,120 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Get Stronger Without Stress </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fitness with Smit</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Metal+Mania&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.85)),
+        url('https://images.unsplash.com/photo-1590487988256-9ed24133863e?q=80&w=728&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+      background-size: cover;
+      color: #e0ffe0;
+      min-height: 100vh;
+      padding: 2rem 1rem;
+    }
+  </style>
 </head>
 <body>
   <header class="hero">
-    <h1>Transform Together 💪</h1>
+    <h1>Transform Together</h1>
     <p>Your personal fitness guide by Smit — simple, strong, sustainable.</p>
-    <a href="#plan" class="hero-btn">Start Your Plan</a>
+    <a href="login.html" class="hero-btn">You Have Login?</a>
   </header>
 
   <main>
     <section id="plan" class="workout-cards">
       <h2>📅 Weekly Workout Plan</h2>
       <div class="cards">
-        <div class="card">Day 1<br><strong>Chest + Triceps</strong></div>
-        <div class="card">Day 2<br><strong>Back + Biceps</strong></div>
-        <div class="card">Day 3<br><strong>Legs</strong></div>
-        <div class="card">Day 4<br><strong>Shoulders + Core</strong></div>
-        <div class="card">Day 5<br><strong>Full Body / HIIT</strong></div>
+
+        <div class="card" onclick="toggleWorkout(this)">
+          <div class="card-title">Day 1<br><strong>Chest + Triceps</strong></div>
+          <ul class="card-details">
+            <li>🔹 Regular Pushups</li>
+            <li>🔹 Wide-to-Narrow Pushups</li>
+            <li>🔹 Pushups with 5-sec hold (bottom)</li>
+            <li>🔹 Decline Pushups</li>
+            <li>🔹 Dips with Chair</li>
+            <li>🔹 Diamond Pushups</li>
+            <li>🔹 Tricep Dips</li>
+            <li>🔹 Knee / Incline / Wall Pushups (Beginners)</li>
+          </ul>
+        </div>
+
+        <div class="card" onclick="toggleWorkout(this)">
+          <div class="card-title">Day 2<br><strong>Back + Biceps</strong></div>
+          <ul class="card-details">
+            <li>🔹 Reverse Snow Angels</li>
+            <li>🔹 Supermans</li>
+            <li>🔹 Wall Pulls</li>
+            <li>🔹 Towel Curls (Isometrics)</li>
+            <li>🔹 Backpack Rows</li>
+            <li>🔹 Arm Circles</li>
+          </ul>
+        </div>
+
+        <div class="card" onclick="toggleWorkout(this)">
+          <div class="card-title">Day 3<br><strong>Legs</strong></div>
+          <ul class="card-details">
+            <li>🔹 Bodyweight Squats</li>
+            <li>🔹 Wall Sit (30s+)</li>
+            <li>🔹 Lunges (forward/reverse)</li>
+            <li>🔹 Glute Bridges</li>
+            <li>🔹 Calf Raises</li>
+            <li>🔹 Jump Squats</li>
+          </ul>
+        </div>
+
+        <div class="card" onclick="toggleWorkout(this)">
+          <div class="card-title">Day 4<br><strong>Shoulders + Core</strong></div>
+          <ul class="card-details">
+            <li>🔹 Pike Pushups</li>
+            <li>🔹 Wall Walks</li>
+            <li>🔹 Arm Circles / Shoulder Taps</li>
+            <li>🔹 Planks (30-60s)</li>
+            <li>🔹 Hollow Hold</li>
+            <li>🔹 V-Ups / Leg Raises</li>
+          </ul>
+        </div>
+
+        <div class="card" onclick="toggleWorkout(this)">
+          <div class="card-title">Day 5<br><strong>Full Body / HIIT</strong></div>
+          <ul class="card-details">
+            <li>🔹 Jumping Jacks</li>
+            <li>🔹 High Knees</li>
+            <li>🔹 Mountain Climbers</li>
+            <li>🔹 Burpees</li>
+            <li>🔹 Pushups + Squats Combo</li>
+            <li>🔹 Plank to Jump</li>
+          </ul>
+        </div>
+
       </div>
     </section>
 
     <section class="video-section">
       <h2>🎥 Workout Demo</h2>
       <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/dJlFmxiL11s" frameborder="0" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/hEXjX6nwDoY?si=OR3_HtUIq-L9YGyX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </section>
 
     <section class="tips-section">
-      <h2>Pro Tips</h2>
+      <h2>⚡ Pro Tips</h2>
       <div class="tips">
         <div class="tip">💧 Stay hydrated always</div>
         <div class="tip">📏 Focus on perfect form</div>
@@ -47,5 +128,17 @@
   <footer>
     <p>Built with 💙 by Smit for friends only</p>
   </footer>
+
+  <script>
+    function toggleWorkout(clickedCard) {
+      const allCards = document.querySelectorAll('.card');
+      allCards.forEach(card => {
+        if (card !== clickedCard) {
+          card.classList.remove('open');
+        }
+      });
+      clickedCard.classList.toggle('open');
+    }
+  </script>
 </body>
 </html>

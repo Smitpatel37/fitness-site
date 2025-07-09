@@ -1,102 +1,183 @@
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Base */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f8fff8;
-  color: #333;
+  font-family:'Josefin Sans', static;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #ddd;
   line-height: 1.6;
   padding: 1rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
+/* Hero */
 header.hero {
   text-align: center;
-  background: linear-gradient(135deg, #27ae60, #2ecc71);
-  color: white;
+  background: rgba(0, 0, 0, 0.6);
   padding: 3rem 1rem;
-  border-radius: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00ff90aa;
+  margin-bottom: 2rem;
 }
 
 .hero h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #00ff90;
+  text-shadow: 0 0 10px #00ff90aa;
 }
 
 .hero p {
   font-size: 1.1rem;
+  color: #a0f7c0;
+  text-shadow: 0 0 6px #a0f7c0aa;
 }
 
 .hero-btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.7rem 1.2rem;
-  background-color: #ffffff;
-  color: #27ae60;
-  border-radius: 20px;
-  font-weight: bold;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: #00ff90;
+  color: #003300;
+  font-weight: 700;
+  border-radius: 30px;
   text-decoration: none;
-  transition: 0.3s;
+  box-shadow: 0 0 10px #00ff90cc;
+  display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
 .hero-btn:hover {
-  background-color: #e9f7ef;
+  background-color: #00d478;
+  box-shadow: 0 0 15px #00d478cc;
 }
 
+/* Section Titles */
 h2 {
-  margin: 2rem 0 1rem;
+  margin-bottom: 1rem;
+  color: #00ff90;
   text-align: center;
-  color: #2e7d32;
+  text-shadow: 0 0 5px #00ff90cc;
 }
 
+/* Cards container */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 1rem;
-  margin: 1rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
+.metal-mania-regular {
+  font-family: "Metal Mania", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Card */
 .card {
-  background: #ffffff;
-  padding: 1rem;
-  border: 2px solid #a5d6a7;
+  background: rgba(0, 0, 0, 0.7);
   border-radius: 12px;
-  text-align: center;
-  font-weight: 600;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ff90aa;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  color: #c0ffc0;
 }
 
-.video-wrapper {
-  margin: 1rem auto;
-  max-width: 600px;
+.card:hover {
+  background: rgba(0, 0, 0, 0.9);
+  box-shadow: 0 0 20px #00ff90cc;
 }
 
-iframe {
+.card-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  user-select: none;
+  margin-bottom: 0.3rem;
+  text-shadow: 0 0 3px #00ff90cc;
+}
+
+/* Hidden exercise list */
+.card-details {
+  display: none;
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.4;
+  list-style: none;
+  padding-left: 1rem;
+  color: #aaffaa;
+}
+
+/* Show when open */
+.card.open .card-details {
+  display: block;
+}
+
+/* Video Section */
+.video-section {
+  margin-top: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px #00ff90aa;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.video-wrapper iframe {
   width: 100%;
-  height: 315px;
-  border-radius: 10px;
+  height: 400px;
+  border: none;
+  display: block;
 }
 
+/* Tips Section */
 .tips {
+  margin-top: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  margin: 1rem 0;
 }
 
 .tip {
-  background: #e8f5e9;
+  background: rgba(0, 255, 144, 0.15);
   padding: 1rem;
-  border-left: 4px solid #66bb6a;
-  border-radius: 8px;
-  font-weight: 500;
+  border-radius: 10px;
+  color: #00ff90;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 0 10px #00ff90aa;
+  user-select: none;
 }
 
+/* Footer */
 footer {
+  margin-top: auto;
   text-align: center;
-  margin-top: 3rem;
+  color: #00ff90cc;
   font-size: 0.9rem;
-  color: #777;
+  padding: 1rem 0;
+  user-select: none;
+  text-shadow: 0 0 6px #00ff90aa;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  header.hero h1 {
+    font-size: 2rem;
+  }
+
+  .video-wrapper iframe {
+    height: 250px;
+  }
 }
