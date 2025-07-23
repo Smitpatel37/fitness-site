@@ -45,38 +45,45 @@
         <div class="card" onclick="toggleWorkout(this)">
           <div class="card-title">Day 1<br><strong>Chest + Triceps</strong></div>
           <ul class="card-details">
-            <li>🔹 Regular Pushups</li>
-            <li>🔹 Wide-to-Narrow Pushups</li>
-            <li>🔹 Pushups with 5-sec hold (bottom)</li>
-            <li>🔹 Decline Pushups</li>
-            <li>🔹 Dips with Chair</li>
-            <li>🔹 Diamond Pushups</li>
-            <li>🔹 Tricep Dips</li>
-            <li>🔹 Knee / Incline / Wall Pushups (Beginners)</li>
+            <li>
+              
+              <button class="exercise-btn" onclick="openModal('https://www.youtube.com/embed/_l3ySVKYVJ8')">Push-Up</button>
+              <button class="exercise-btn" onclick="window.open('https://youtu.be/R22C92xNlx0?si=inJpzJHM4SfQLPlC')">Wide-to-Narrow Pushups</button>
+              <button class="exercise-btn" onclick="window.open('https://youtu.be/mmTAFhFpdY8?si=zaF9wFkG9by3x2x7')">Pushups with 5-sec hold (bottom)</button>
+              <button class="exercise-btn" onclick="window.open('https://youtu.be/QBlYp-EwHlo?si=8Ush8WqtekDORzMM')">Decline Pushups</button>
+              <button class="exercise-btn" onclick="window.open('https://youtu.be/PNTB_BeqiMs?si=W_CaUvlbquSm-Hle')">Dips with Chair</button>
+              <button class="exercise-btn" onclick="window.open('https://youtu.be/K8bKxVcwjrk?si=axDd12pG9rATxQbo')">Diamond Pushups</button>
+              <button class="exercise-btn" onclick="window.open('https://youtu.be/bwWlK8f1-NM?si=r_D7znz2NGPzMUdO')">Knee / Incline / Wall Pushups (Beginners)</button>
+              <button class="exercise-btn" onclick="openModal('https://www.youtube.com/embed/0326dy_-CzM')">Tricep Dips</button>
+            </li>
           </ul>
         </div>
 
         <div class="card" onclick="toggleWorkout(this)">
           <div class="card-title">Day 2<br><strong>Back + Biceps</strong></div>
           <ul class="card-details">
-            <li>🔹 Reverse Snow Angels</li>
-            <li>🔹 Supermans</li>
-            <li>🔹 Wall Pulls</li>
-            <li>🔹 Towel Curls (Isometrics)</li>
-            <li>🔹 Backpack Rows</li>
-            <li>🔹 Arm Circles</li>
+            <li>
+              <button class="exercise-btn" onclick="window.open('https://youtu.be/8tQUrvafTdg?si=fOws_lzQB0a3rXFr')">Reverse Snow Angels</button>
+              <button class="exercise-btn" onclick="openModal('https://www.youtube.com/embed/rj7z2axkKHw')">Supermans</button>
+              <button class="exercise-btn" onclick="openModal('https://www.youtube.com/embed/NTR4WMOaZq8')">Backpack Rows</button>
+              <button class="exercise-btn" onclick="window.open('https://youtu.be/w6wJQNJ7OZA?si=_CHcWYKCGwrn8ect')">Wall Pulls</button>
+              <button class="exercise-btn" onclick="window.open('https://www.youtube.com/watch?v=astPQqDb1s4')">Towel Curls (Isometrics)</button>
+              <button class="exercise-btn" onclick="window.open('https://youtu.be/UVMEnIaY8aU?si=nCqNAobgPzFOGGwr')">Arm Circles</button>
+
+            </li>
           </ul>
         </div>
 
         <div class="card" onclick="toggleWorkout(this)">
           <div class="card-title">Day 3<br><strong>Legs</strong></div>
           <ul class="card-details">
-            <li>🔹 Bodyweight Squats</li>
-            <li>🔹 Wall Sit (30s+)</li>
-            <li>🔹 Lunges (forward/reverse)</li>
-            <li>🔹 Glute Bridges</li>
-            <li>🔹 Calf Raises</li>
-            <li>🔹 Jump Squats</li>
+            <li><button class="exercise-btn" onclick="openModal('https://www.youtube.com/embed/l83R5PblSMA')">Bodyweight Squats</button>
+            <button class="exercise-btn" onclick="window.open('https://www.youtube.com/watch?v=cWTZ8Am1Ee0')">Wall Sit (30s+)</button>
+            <button class="exercise-btn" onclick="window.open('https://youtu.be/MxfTNXSFiYI?si=MuoUQzEnPnXeSzJP')">Lunges (forward/reverse)</button>
+            <button class="exercise-btn" onclick="window.open('https://youtu.be/sh63qy5EV_8?si=LRwyOyIP-QlRXsY5')">Glute Bridges</button>
+            <button class="exercise-btn" onclick="window.open('https://youtu.be/eMTy3qylqnE?si=CxyojnW0-O4OpCPF')">Calf Raises</button>
+            <button class="exercise-btn" onclick="window.open('https://youtu.be/5xv0DKqe5XQ?si=xdRuDb_HEbcw7H-M')">Jump Squats</button>
+            </li>
           </ul>
         </div>
 
@@ -139,6 +146,37 @@
       });
       clickedCard.classList.toggle('open');
     }
+
+    function openModal(videoURL) {
+      const modal = document.getElementById("videoModal");
+      const iframe = document.getElementById("exerciseVideo");
+      iframe.src = videoURL;
+      modal.style.display = "block";
+    }
+
+    function closeModal() {
+      const modal = document.getElementById("videoModal");
+      const iframe = document.getElementById("exerciseVideo");
+      modal.style.display = "none";
+      iframe.src = ""; // Stop video
+    }
+
+    // Optional: Close modal when clicking outside
+    window.onclick = function(event) {
+      const modal = document.getElementById("videoModal");
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+
+
   </script>
+
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <iframe id="exerciseVideo" width="100%" height="315" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
 </body>
 </html>

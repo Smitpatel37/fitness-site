@@ -17,6 +17,27 @@ body {
   flex-direction: column;
 }
 
+.card-details button {
+  background: transparent;
+  color: #00ff90;
+  border: 2px solid #00ff90;
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Josefin Sans', static;
+  transition: background 0.3s ease, transform 0.2s ease, color 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 144, 0.2);
+  margin-top: 10px;
+}
+
+.card-details button:hover {
+  background: rgba(0, 255, 144, 0.1);
+  color: #ffffff;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 144, 0.4);
+}
+
 /* Hero */
 header.hero {
   text-align: center;
@@ -56,6 +77,43 @@ header.hero {
 .hero-btn:hover {
   background-color: #00d478;
   box-shadow: 0 0 15px #00d478cc;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  background-color: #222;
+  margin: 10% auto;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  position: relative;
+  box-shadow: 0 0 20px #00ff90aa;
+}
+
+.modal-content iframe {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.close {
+  color: #00ff90;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 /* Section Titles */
